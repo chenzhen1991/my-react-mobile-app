@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import {TabBar} from 'antd-mobile'
+import {TabBar} from 'antd-mobile';
+import { history } from 'umi';
 
 const menus = [
   {
@@ -25,10 +26,12 @@ const menus = [
 ]
 
 interface BottomNavProps {
-
+  pathname:string
 }
 export default class BottomNav extends Component<BottomNavProps> {
   render(){
+    const {pathname} = this.props
+    console.log(pathname)
     return <TabBar>
       {menus.map(({icon, title,link}, index) => {
         return (
@@ -38,8 +41,18 @@ export default class BottomNav extends Component<BottomNavProps> {
                   className={'iconfont icon-'+icon}
                 />
               }
+              selectedIcon={
+                <div
+                  className={'red iconfont icon-'+icon}
+                />
+              }
+              selected={pathname === link}
               title={title}
               key={icon}
+              onPress={()=>{
+                console.log(history)
+                history.push(link)
+              }}
           >
           </TabBar.Item>
         )
