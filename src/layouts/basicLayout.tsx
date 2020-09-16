@@ -22,7 +22,6 @@ const BasicLayout: React.FC<BasicLayoutProps> = props => {
     }
   }, []);
   const {pathname} = location;
-  console.log('props', props)
   return <div>
     <article>{children}</article>
     <footer>
