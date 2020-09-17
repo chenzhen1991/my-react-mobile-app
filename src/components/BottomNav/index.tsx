@@ -31,7 +31,6 @@ interface BottomNavProps {
 export default class BottomNav extends Component<BottomNavProps> {
   render(){
     const {pathname} = this.props
-    console.log(pathname)
     return <TabBar>
       {menus.map(({icon, title,link}, index) => {
         return (

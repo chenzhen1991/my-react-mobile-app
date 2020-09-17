@@ -4,7 +4,7 @@ import styles from './index.less';
 export default () => {
   return (
     <div>
-      <h1 className={styles.title}>Page olist/index</h1>
+      <h1 className={styles.title}>Page wwwwolist/index</h1>
     </div>
   );
 }
