@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react';
-import classnames from 'classnames';
+import React from 'react';
 import styles from './index.less';
 import { WingBlank, Button } from 'antd-mobile';
 
